@@ -1,4 +1,5 @@
 #BlueJ class context
+<<<<<<< HEAD
 #Sun Oct 04 18:23:47 ART 2026
 comment0.target=Barbero
 comment1.target=Barbero()
@@ -8,3 +9,14 @@ comment3.target=java.lang.String getNombre()
 comment4.target=java.lang.String getApellido()
 comment5.target=int getIdEmpleado()
 numComments=6
+=======
+#Sun Oct 04 13:26:09 ART 2026
+comment0.target=Barbero
+comment0.text=\r\n Write a description of class Barbero here.\r\n \r\n @author (your name) \r\n @version (a version number or a date)\r\n
+comment1.target=Barbero()
+comment1.text=\r\n Constructor for objects of class Barbero\r\n
+comment2.params=y
+comment2.target=int sampleMethod(int)
+comment2.text=\r\n An example of a method - replace this comment with your own\r\n \r\n @param  y   a sample parameter for a method\r\n @return     the sum of x and y \r\n
+numComments=3
+>>>>>>> 5891bb268bcf213cc03497277bfede5c3052038e
