@@ -1,0 +1,10 @@
+#BlueJ class context
+#Sun Oct 04 18:23:47 ART 2026
+comment0.target=Barbero
+comment1.target=Barbero()
+comment2.params=nombre apellido idEmpleado
+comment2.target=Barbero(java.lang.String, java.lang.String, int)
+comment3.target=java.lang.String getNombre()
+comment4.target=java.lang.String getApellido()
+comment5.target=int getIdEmpleado()
+numComments=6

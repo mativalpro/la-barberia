@@ -1,33 +1,16 @@
 
-/**
- * Write a description of class Barbero here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Barbero
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Barbero
-     */
-    public Barbero()
-    {
-        // initialise instance variables
-        x = 0;
+    private String nombre;
+    private String apellido;
+    private int idEmpleado;
+    public Barbero(){}
+    public Barbero(String nombre, String apellido,int idEmpleado){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.idEmpleado=idEmpleado;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    private String getNombre(){return nombre;}
+    private String getApellido(){return apellido;}
+    private int getIdEmpleado(){return idEmpleado;}
 }

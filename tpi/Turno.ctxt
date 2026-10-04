@@ -1,9 +1,10 @@
 #BlueJ class context
-#Sat Oct 03 19:48:41 ART 2026
+#Sat Oct 03 23:33:20 ART 2026
 comment0.target=Turno
-comment1.target=Turno()
-comment1.text=\r\n Constructor for objects of class Turno\r\n
-comment2.params=y
-comment2.target=int sampleMethod(int)
-comment2.text=\r\n An example of a method - replace this comment with your own\r\n \r\n @param  y   a sample parameter for a method\r\n @return     the sum of x and y \r\n
-numComments=3
+comment1.params=fecha hora estado servicio edad cliente
+comment1.target=Turno(java.lang.String, java.lang.String, EstadoTurno, Servicio, int, Cliente)
+comment2.params=nuevoEstado
+comment2.target=void modificarEstado(EstadoTurno)
+comment3.params=nuevaFecha nuevaHora
+comment3.target=void modificarHorario(java.lang.String, java.lang.String)
+numComments=4
