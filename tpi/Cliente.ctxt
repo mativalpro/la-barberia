@@ -1,9 +1,5 @@
 #BlueJ class context
-<<<<<<< HEAD
-#Sat Oct 03 23:32:34 ART 2026
-=======
-#Sun Oct 04 13:26:09 ART 2026
->>>>>>> 5891bb268bcf213cc03497277bfede5c3052038e
+#Mon Oct 05 17:01:28 ART 2026
 comment0.target=Cliente
 comment1.params=nombre apellido nroSocio edad
 comment1.target=Cliente(java.lang.String, java.lang.String, int, int)

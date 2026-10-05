@@ -1,17 +1,15 @@
 #BlueJ class context
-<<<<<<< HEAD
-#Sat Oct 03 23:32:34 ART 2026
+#Mon Oct 05 17:01:28 ART 2026
 comment0.target=Barberia
 comment0.text=\r\n Write a description of class Barberia here.\r\n \r\n @author (your name) \r\n @version (a version number or a date)\r\n
-comment1.target=Barberia()
-comment1.text=\r\n Constructor for objects of class Barberia\r\n
-comment2.params=y
-comment2.target=int sampleMethod(int)
-comment2.text=\r\n An example of a method - replace this comment with your own\r\n \r\n @param  y   a sample parameter for a method\r\n @return     the sum of x and y \r\n
-numComments=3
-=======
-#Sun Oct 04 13:28:05 ART 2026
-comment0.target=Barberia
-comment0.text=\r\n Write a description of class Barberia here.\r\n \r\n @author (your name) \r\n @version (a version number or a date)\r\n
-numComments=1
->>>>>>> 5891bb268bcf213cc03497277bfede5c3052038e
+comment1.params=nombre direccion
+comment1.target=Barberia(java.lang.String, java.lang.String)
+comment2.params=barbero
+comment2.target=void agregarBarbero(Barbero)
+comment3.params=servicio
+comment3.target=void agregarServicio(Servicio)
+comment4.params=turno
+comment4.target=void agregarTurnos(Turno)
+comment5.target=java.lang.String getNombre()
+comment6.target=java.lang.String getDireccion()
+numComments=7
