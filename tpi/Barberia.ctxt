@@ -1,7 +1,6 @@
 #BlueJ class context
-#Mon Oct 05 17:01:28 ART 2026
+#Tue Oct 06 23:19:27 ART 2026
 comment0.target=Barberia
-comment0.text=\r\n Write a description of class Barberia here.\r\n \r\n @author (your name) \r\n @version (a version number or a date)\r\n
 comment1.params=nombre direccion
 comment1.target=Barberia(java.lang.String, java.lang.String)
 comment2.params=barbero

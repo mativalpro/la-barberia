@@ -1,4 +1,3 @@
-
 public class Barbero
 {
     private String nombre;
