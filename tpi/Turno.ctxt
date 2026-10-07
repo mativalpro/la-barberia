@@ -1,10 +1,11 @@
 #BlueJ class context
-#Wed Oct 07 12:00:59 ART 2026
+#Wed Oct 07 15:19:58 ART 2026
 comment0.target=Turno
-comment1.params=fecha hora estado servicio edad cliente
-comment1.target=Turno(java.lang.String, java.lang.String, EstadoTurno, Servicio, int, Cliente)
+comment1.params=cliente barbero fecha hora detalle
+comment1.target=Turno(Cliente, Barbero, java.lang.String, java.lang.String, DetalleTurno)
 comment2.params=opcion
 comment2.target=void modificarEstado(int)
 comment3.params=nuevaFecha nuevaHora
 comment3.target=void modificarHorario(java.lang.String, java.lang.String)
-numComments=4
+comment4.target=java.lang.String mostrarInformacion()
+numComments=5

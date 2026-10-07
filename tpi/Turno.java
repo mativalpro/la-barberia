@@ -1,17 +1,23 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class Turno
 {
     private String fecha;
     private String hora;
     private EstadoTurno estado;
-    private Servicio servicio;
+    private List<DetalleTurno> detalles = new ArrayList<>();
     private Cliente cliente;
+    private Barbero barbero;
 
-    public Turno(String fecha, String hora, EstadoTurno estado, Servicio servicio, int edad, Cliente cliente){
+    public Turno(Cliente cliente, Barbero barbero, String fecha, String hora, DetalleTurno detalle){
+        this.cliente = cliente;
+        this.barbero = barbero;
         this.fecha = fecha;
         this.hora = hora;
-        this.estado = estado;
-        this.servicio = servicio;
-    }
+        this.detalles.add(detalle);
+        this.estado = EstadoTurno.PENDIENTE;
+}
 
     //public enum estadoTurno{
     //    PENDIENTE,
@@ -32,9 +38,16 @@ public class Turno
 }
 
     public void modificarHorario(String nuevaFecha, String nuevaHora){
-        if (this.estado != EstadoTurno.CANCELADO){
+        if (this.estado == EstadoTurno.PENDIENTE || this.estado == EstadoTurno.CONFIRMADO){
             this.fecha = nuevaFecha;
             this.hora = nuevaHora;
     }
+}
+
+    public String mostrarInformacion(){
+        return "Cliente: " + cliente.getNombre() + " " + cliente.getApellido()
+        + "\nBarbero: " + barbero.getNombre() + " " + barbero.getApellido()
+        + "\nServicios: " + detalles
+        + "\nTotal a pagar: $" + detalles.get(0).calcularPrecioTotal();
 }
 }
