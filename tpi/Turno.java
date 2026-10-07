@@ -13,16 +13,23 @@ public class Turno
         this.servicio = servicio;
     }
 
-    
     //public enum estadoTurno{
     //    PENDIENTE,
     //    COMFIRMADO,
     //    CANCELADO
     //}
-
-    public void modificarEstado(EstadoTurno nuevoEstado){
-        this.estado = nuevoEstado;
-    }
+    
+    public void modificarEstado(int opcion){
+        if (opcion == 1){
+            this.estado = EstadoTurno.PENDIENTE;
+        }
+        if (opcion == 2){
+            this.estado = EstadoTurno.CONFIRMADO;
+        }
+        if (opcion == 3){
+            this.estado = EstadoTurno.CANCELADO;
+        }
+}
 
     public void modificarHorario(String nuevaFecha, String nuevaHora){
         if (this.estado != EstadoTurno.CANCELADO){
