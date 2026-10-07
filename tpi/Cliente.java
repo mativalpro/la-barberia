@@ -3,13 +3,11 @@ public class Cliente
     private String nombre;
     private String apellido;
     private int nroSocio;
-    private int edad;
 
-    public Cliente(String nombre, String apellido, int nroSocio, int edad){
+    public Cliente(String nombre, String apellido, int nroSocio){
         this.nombre = nombre;
         this.apellido = apellido;
         this.nroSocio = nroSocio;
-        this.edad = edad;
     }
 
     public String getNombre(){
@@ -22,9 +20,5 @@ public class Cliente
 
     public int getNumeroDeSocio(){
         return nroSocio;
-    }
-
-    public int getEdad(){
-        return edad;
     }
 }

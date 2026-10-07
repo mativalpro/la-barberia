@@ -1,4 +1,3 @@
-
 public class Barbero
 {
     private String nombre;
@@ -10,7 +9,16 @@ public class Barbero
         this.apellido=apellido;
         this.idEmpleado=idEmpleado;
     }
-    private String getNombre(){return nombre;}
-    private String getApellido(){return apellido;}
-    private int getIdEmpleado(){return idEmpleado;}
+    
+    public String getNombre(){
+        return nombre;
+    }
+    
+    public String getApellido(){
+        return apellido;
+    }
+    
+    public int getIdEmpleado(){
+        return idEmpleado;
+    }
 }
