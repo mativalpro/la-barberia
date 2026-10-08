@@ -1,8 +1,6 @@
 #BlueJ class context
-<<<<<<< HEAD
-#Wed Oct 07 20:01:06 ART 2026
+#Wed Oct 07 21:33:31 ART 2026
 comment0.target=Barberia
-comment0.text=\r\n Write a description of class Barberia here.\r\n \r\n @author (your name) \r\n @version (a version number or a date)\r\n
 comment1.target=Barberia()
 comment2.params=cliente
 comment2.target=void agregarCliente(Cliente)
@@ -11,18 +9,3 @@ comment3.target=void agregarBarbero(Barbero)
 comment4.params=turno
 comment4.target=void agregarTurno(Turno)
 numComments=5
-=======
-#Wed Oct 07 15:19:58 ART 2026
-comment0.target=Barberia
-comment1.params=nombre direccion
-comment1.target=Barberia(java.lang.String, java.lang.String)
-comment2.params=barbero
-comment2.target=void agregarBarbero(Barbero)
-comment3.params=servicio
-comment3.target=void agregarServicio(Servicio)
-comment4.params=turno
-comment4.target=void agregarTurnos(Turno)
-comment5.target=java.lang.String getNombre()
-comment6.target=java.lang.String getDireccion()
-numComments=7
->>>>>>> 8f1871804578a47d356df79d2c664228e6e71c9e

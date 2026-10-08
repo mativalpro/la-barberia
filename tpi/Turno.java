@@ -6,25 +6,20 @@ public class Turno
     private String fecha;
     private String hora;
     private EstadoTurno estado;
-    private List<DetalleTurno> detalles = new ArrayList<>();
+    private List<Servicio> servicios = new ArrayList<>();
     private Cliente cliente;
     private Barbero barbero;
 
-    public Turno(Cliente cliente, Barbero barbero, String fecha, String hora, DetalleTurno detalle){
+    public Turno(Cliente cliente, Barbero barbero, String fecha, String hora){
         this.cliente = cliente;
         this.barbero = barbero;
         this.fecha = fecha;
         this.hora = hora;
-        this.detalles.add(detalle);
+        
         this.estado = EstadoTurno.PENDIENTE;
 }
 
-    //public enum estadoTurno{
-    //    PENDIENTE,
-    //    COMFIRMADO,
-    //    CANCELADO
-    //}
-    
+
     public void modificarEstado(int opcion){
         if (opcion == 1){
             this.estado = EstadoTurno.PENDIENTE;
@@ -44,10 +39,19 @@ public class Turno
     }
 }
 
-    public String mostrarInformacion(){
-        return "Cliente: " + cliente.getNombre() + " " + cliente.getApellido()
-        + "\nBarbero: " + barbero.getNombre() + " " + barbero.getApellido()
-        + "\nServicios: " + detalles
-        + "\nTotal a pagar: $" + detalles.get(0).calcularPrecioTotal();
+    // mostrar informacion
+    
+    
+    public void agregarServicios(Servicio servicio){
+        servicios.add(servicio);
+    }
+    
+    public double calcularPrecioTotal(){
+        double total = 0.0;
+        for (Servicio s : servicios){
+            total += s.getPrecio();
+        }
+        return total;
+    }
 }
-}
+

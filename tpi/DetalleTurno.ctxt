@@ -1,9 +1,0 @@
-#BlueJ class context
-#Wed Oct 07 14:07:13 ART 2026
-comment0.target=DetalleTurno
-comment1.params=servicio
-comment1.target=DetalleTurno(Servicio)
-comment2.params=servicio
-comment2.target=void agregarServicios(Servicio)
-comment3.target=double calcularPrecioTotal()
-numComments=4
