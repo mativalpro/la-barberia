@@ -1,9 +1,0 @@
-#BlueJ class context
-#Tue Oct 06 23:19:26 ART 2026
-comment0.target=Cliente
-comment1.params=nombre apellido nroSocio
-comment1.target=Cliente(java.lang.String, java.lang.String, int)
-comment2.target=java.lang.String getNombre()
-comment3.target=java.lang.String getApellido()
-comment4.target=int getNumeroDeSocio()
-numComments=5

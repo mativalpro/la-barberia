@@ -30,6 +30,7 @@ public class Turno
         if (opcion == 3){
             this.estado = EstadoTurno.CANCELADO;
         }
+        // 3 metodos 
 }
 
     public void modificarHorario(String nuevaFecha, String nuevaHora){
