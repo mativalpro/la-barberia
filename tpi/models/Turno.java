@@ -1,16 +1,16 @@
 import java.util.List;
 import java.util.ArrayList;
-
+import java.time.LocalDate;
 public class Turno
 {
-    private String fecha;
-    private String hora;
+    private LocalDate fecha;
+    private int hora;
     private EstadoTurno estado;
     private List<Servicio> servicios = new ArrayList<>();
     private Cliente cliente;
     private Barbero barbero;
 
-    public Turno(Cliente cliente, Barbero barbero, String fecha, String hora){
+    public Turno(Cliente cliente, Barbero barbero, LocalDate fecha, int hora){
         this.cliente = cliente;
         this.barbero = barbero;
         this.fecha = fecha;
@@ -33,7 +33,7 @@ public class Turno
         // 3 metodos 
 }
 
-    public void modificarHorario(String nuevaFecha, String nuevaHora){
+    public void modificarHorario(LocalDate nuevaFecha, int nuevaHora){
         if (this.estado == EstadoTurno.PENDIENTE || this.estado == EstadoTurno.CONFIRMADO){
             this.fecha = nuevaFecha;
             this.hora = nuevaHora;
@@ -46,13 +46,18 @@ public class Turno
     public void agregarServicios(Servicio servicio){
         servicios.add(servicio);
     }
-    
-    public double calcularPrecioTotal(){
-        double total = 0.0;
-        for (Servicio s : servicios){
-            total += s.getPrecio();
-        }
-        return total;
+    public Cliente getCliente(){
+        return cliente;
     }
+    public LocalDate getFecha(){
+        return fecha;
+    }
+    public int getHora(){
+        return hora;
+    }
+    public EstadoTurno getEstado(){
+        return estado;
+    }
+  
 }
 

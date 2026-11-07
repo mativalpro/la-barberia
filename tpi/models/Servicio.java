@@ -1,12 +1,12 @@
 public class Servicio
 {
     private String nombre;
-    private double precio;
+    
     public Servicio(){}
-    public Servicio (String nombre, double precio){
+    public Servicio (String nombre){
         this.nombre=nombre;
-        this.precio=precio;
     }
+    
     public String getNombre(){return nombre;}
-    public double getPrecio(){return precio;}
+    
 }
