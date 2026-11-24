@@ -8,7 +8,7 @@ public class Main {
         
         Scanner Sc = new Scanner(System.in);
         System.out.println("bienvenido a la barberia");
-        System.out.println("toque " + "\n" + "1 para cargar un cliente" + "\n" + "2 para cargar un turno" + "\n" + "3 para mostrar su turno" + "\n" + "4 para cancelar un turno" + "\n" + "0 para salir");
+        System.out.println("toque " + "\n" + "1 para cargar un cliente" + "\n" + "2 para cargar un turno" + "\n" + "3 para mostrar su turno" + "\n" + "4 para cancelar un turno" + "\n"  + "5 para mostrar listado de turnos" + "\n" + "0 para salir");
         int opcion = Sc.nextInt();
         switch (opcion){
             case 1:
@@ -37,6 +37,9 @@ public class Main {
                 int idCliente1 = Sc.nextInt();
                 gestor.cancelarTurno(idCliente1);
                 break;
+            case 5:
+                gestor.mostrarListadoTurnos();
+                break;
             case 0:
                 System.out.println("Cerrando el sistema");
                 break;
@@ -45,6 +48,7 @@ public class Main {
             
 
         }
+        Sc.close();
 
     }
 

@@ -61,5 +61,6 @@ public class Turno
         return estado;
     }
     public int getId(){return id;}
+    public Barbero getBarbero(){return barbero;}
 }
 

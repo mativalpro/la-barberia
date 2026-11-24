@@ -67,13 +67,14 @@ public class Barberia
 
         Turno turno = new Turno(idTurno,listaClientes.get(idCliente), listaBarberos.get(idBarbero), fechaTurno, hora);
         listaTurnos.add(turno);
+        Sc.close();
     }
     public void mostrarTurnos(int idCliente){
                
 
                 for (Turno turno : listaTurnos){
                     if (turno.getCliente().getId() == idCliente){
-                        System.out.println("fecha: " + turno.getFecha() + " hora: " + turno.getHora() + " estado: " + turno.getEstado());
+                        System.out.println("ID: " + turno.getId() + " fecha: " + turno.getFecha() + " hora: " + turno.getHora() + " estado: " + turno.getEstado() + " barbero: " + turno.getBarbero());
                     }
                 }
             }
@@ -86,6 +87,15 @@ public class Barberia
         }
 
     }
+    public void mostrarListadoTurnos(){
+               
+
+                for (Turno turno : listaTurnos){
+                    
+                    System.out.println("ID: "  + turno.getId() + "fecha: " + turno.getFecha() + " hora: " + turno.getHora() + " estado: " + turno.getEstado()+ " barbero: " + turno.getBarbero());
+                    
+                }
+            }
 
 }
 
