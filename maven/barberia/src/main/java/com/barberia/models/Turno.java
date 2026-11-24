@@ -50,6 +50,9 @@ public class Turno
     public Cliente getCliente(){
         return cliente;
     }
+    public Barbero getBarbero(){
+        return barbero;
+    }
     public LocalDate getFecha(){
         return fecha;
     }

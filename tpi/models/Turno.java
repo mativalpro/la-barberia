@@ -2,7 +2,8 @@ import java.util.List;
 import java.util.ArrayList;
 import java.time.LocalDate;
 public class Turno
-{
+{   
+    private int id;
     private LocalDate fecha;
     private int hora;
     private EstadoTurno estado;
@@ -10,13 +11,14 @@ public class Turno
     private Cliente cliente;
     private Barbero barbero;
 
-    public Turno(Cliente cliente, Barbero barbero, LocalDate fecha, int hora){
+    public Turno(int id,Cliente cliente, Barbero barbero, LocalDate fecha, int hora){
+        this.id=id;
         this.cliente = cliente;
         this.barbero = barbero;
         this.fecha = fecha;
         this.hora = hora;
         
-        this.estado = EstadoTurno.PENDIENTE;
+        this.estado = EstadoTurno.CONFIRMADO;
 }
 
 
@@ -58,6 +60,6 @@ public class Turno
     public EstadoTurno getEstado(){
         return estado;
     }
-  
+    public int getId(){return id;}
 }
 

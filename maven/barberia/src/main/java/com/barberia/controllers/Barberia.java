@@ -1,4 +1,5 @@
 package com.barberia.controllers;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -20,6 +21,7 @@ public class Barberia
     public Barberia(){
         
     }
+    public void inicializarBD() throws SQLException{InicializadorBD.inicializar();}
     public void cargarDatosCliente(String nombre, String apellido, int id){
         Cliente cliente = new Cliente(nombre, apellido, id);
         listaClientes.add(cliente);

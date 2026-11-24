@@ -3,32 +3,44 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Barberia gestor = new Barberia();
-        Barbero barbero1 = new Barbero("Juan", "Perez", 1);
-        Barbero barbero2 = new Barbero("Carlos", "Gomez", 2);
-        Servicio servicio1 = new Servicio("arreglo de barba");
-        Servicio servicio2 = new Servicio("tintura");
-        gestor.agregarBarbero(barbero2);
-        gestor.agregarBarbero(barbero1);
+        gestor.crearBarbero();
+        gestor.crearServicio();
+        
         Scanner Sc = new Scanner(System.in);
         System.out.println("bienvenido a la barberia");
-        System.out.println("toque " + "\n" + "1 para cargar un cliente" + "\n" + "2 para cargar un turno" + "\n" + "3 para mostrar su turno" + "\n" + "0 para salir");
+        System.out.println("toque " + "\n" + "1 para cargar un cliente" + "\n" + "2 para cargar un turno" + "\n" + "3 para mostrar su turno" + "\n" + "4 para cancelar un turno" + "\n" + "0 para salir");
         int opcion = Sc.nextInt();
-        while (opcion != 0){
-            if (opcion == 1){
-            System.out.println("ingrese su nombre");
-            String nombre = Sc.next();
-            System.out.println("ingrese su apellido");
-            String apellido = Sc.next();
-            System.out.println("ingrese su id");
-            int id = Sc.nextInt();
-            gestor.cargarDatosCliente(nombre, apellido, id);
-            }
-            if (opcion == 2){
+        switch (opcion){
+            case 1:
+                System.out.println("ingrese su nombre");
+                String nombre = Sc.next();
+                System.out.println("ingrese su apellido");
+                String apellido = Sc.next();
+                System.out.println("ingrese su id");
+                int id = Sc.nextInt();
+                gestor.cargarDatosCliente(nombre, apellido, id);
+                break;
+                
+            case 2:
                 gestor.cargarTurnos();
-            }
-            if (opcion == 3){
-                gestor.mostrarTurnos();
-            }
+                break;
+            
+            case 3:
+                System.out.println("ingrese su id");
+               
+                int idCliente = Sc.nextInt();
+                gestor.mostrarTurnos(idCliente);
+                break;
+            case 4:
+                System.out.println("ingrese su id");
+               
+                int idCliente1 = Sc.nextInt();
+                gestor.cancelarTurno(idCliente1);
+                break;
+            case 0:
+                System.out.println("Cerrando el sistema");
+                break;
+            
             
             
 

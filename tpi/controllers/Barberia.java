@@ -14,6 +14,21 @@ public class Barberia
     public Barberia(){
         
     }
+    public void crearBarbero(){
+        Barbero barbero1 = new Barbero("Juan", "Perez", 1);
+        Barbero barbero2 = new Barbero("Carlos", "Gomez", 2);
+        agregarBarbero(barbero1);
+        agregarBarbero(barbero2);
+    }
+    public void crearServicio(){
+        Servicio servicio1 = new Servicio("arreglo de barba");
+        Servicio servicio2 = new Servicio("tintura");
+        agregarServicio(servicio1);
+        agregarServicio(servicio2);
+    }
+    public void agregarServicio(Servicio servicio){
+        listaServicios.add(servicio);
+    }
     public void cargarDatosCliente(String nombre, String apellido, int id){
         Cliente cliente = new Cliente(nombre, apellido, id);
         listaClientes.add(cliente);
@@ -29,7 +44,9 @@ public class Barberia
     }
     public void cargarTurnos(){
         Scanner Sc = new Scanner(System.in);
-        System.out.println("ingrese su id");
+        System.out.println("ingrese un id");
+        int idTurno = Sc.nextInt();
+        System.out.println("ingrese el id del cliente");
         int idCliente = Sc.nextInt();
         for (Barbero barbero : listaBarberos){
             System.out.println("id: " + barbero.getId() + " nombre: " + barbero.getNombre() + " apellido: " + barbero.getApellido());
@@ -48,19 +65,27 @@ public class Barberia
         System.out.println("ingrese la hora del turno (formato: HH)");
         int hora = Sc.nextInt();
 
-        Turno turno = new Turno(listaClientes.get(idCliente), listaBarberos.get(idBarbero), fechaTurno, hora);
+        Turno turno = new Turno(idTurno,listaClientes.get(idCliente), listaBarberos.get(idBarbero), fechaTurno, hora);
         listaTurnos.add(turno);
     }
-    public void mostrarTurnos(){
-                System.out.println("ingrese su id");
-                Scanner Sc = new Scanner(System.in);
-                int idCliente = Sc.nextInt();
+    public void mostrarTurnos(int idCliente){
+               
+
                 for (Turno turno : listaTurnos){
                     if (turno.getCliente().getId() == idCliente){
                         System.out.println("fecha: " + turno.getFecha() + " hora: " + turno.getHora() + " estado: " + turno.getEstado());
                     }
                 }
             }
+
+    public void cancelarTurno(int id){
+        for (Turno turno: listaTurnos){
+            if(turno.getId() == id){
+                turno.modificarEstado(3);
+            }
+        }
+
+    }
 
 }
 
