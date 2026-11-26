@@ -4,19 +4,19 @@ import java.time.LocalDate;
 public class Turno
 {   
     private int id;
-    private LocalDate fecha;
-    private int hora;
+    //private LocalDate fecha;
+    //private int hora;
     private EstadoTurno estado;
     private List<Servicio> servicios = new ArrayList<>();
     private Cliente cliente;
     private Barbero barbero;
 
-    public Turno(int id,Cliente cliente, Barbero barbero, LocalDate fecha, int hora){
+    public Turno(int id,Cliente cliente, Barbero barbero){ //LocalDate fecha, int hora){
         this.id=id;
         this.cliente = cliente;
         this.barbero = barbero;
-        this.fecha = fecha;
-        this.hora = hora;
+        //this.fecha = fecha;
+        //this.hora = hora;
         
         this.estado = EstadoTurno.CONFIRMADO;
 }
@@ -35,12 +35,12 @@ public class Turno
         // 3 metodos 
 }
 
-    public void modificarHorario(LocalDate nuevaFecha, int nuevaHora){
+    /*public void modificarHorario(LocalDate nuevaFecha, int nuevaHora){
         if (this.estado == EstadoTurno.PENDIENTE || this.estado == EstadoTurno.CONFIRMADO){
             this.fecha = nuevaFecha;
             this.hora = nuevaHora;
     }
-}
+}/* */
 
     // mostrar informacion
     
@@ -51,12 +51,12 @@ public class Turno
     public Cliente getCliente(){
         return cliente;
     }
-    public LocalDate getFecha(){
+    /*public LocalDate getFecha(){
         return fecha;
     }
     public int getHora(){
         return hora;
-    }
+    }/* */
     public EstadoTurno getEstado(){
         return estado;
     }
